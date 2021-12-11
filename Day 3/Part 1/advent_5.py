@@ -18,7 +18,6 @@ class Tracker:
         print("0:", self.num_zero)
         print("1:", self.num_one)
 
-
     def power_consumption(self):
         gamma = ''
         epsilon = ''

@@ -2,12 +2,7 @@
 def main():
     with open('input.txt', 'r') as f:
         lines = f.readlines()
-        counter = 0
-        previous_line = None
-        for line in lines:
-            if previous_line and int(line) > previous_line:
-                counter = counter + 1
-            previous_line = int(line)
+        counter = sum([1 for num, x in enumerate(lines[:-1]) if (int(x) < int(lines[num + 1]))])
         print(counter)
 
 
